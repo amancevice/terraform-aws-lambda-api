@@ -63,23 +63,20 @@ resource aws_cloudwatch_log_group logs {
 }
 
 resource aws_lambda_function lambda {
-  description      = "${var.lambda_description}"
-  filename         = "${var.lambda_filename}"
-  function_name    = "${var.lambda_function_name}"
-  handler          = "${var.lambda_handler}"
-  kms_key_arn      = "${var.lambda_kms_key_arn}"
-  layers           = "${var.lambda_layers}"
-  memory_size      = "${var.lambda_memory_size}"
-  publish          = "${var.lambda_publish}"
-  role             = "${var.lambda_role_arn}"
-  runtime          = "${var.lambda_runtime}"
-  source_code_hash = "${var.lambda_source_code_hash}"
-  tags             = "${var.lambda_tags}"
-  timeout          = "${var.lambda_timeout}"
-
-  dead_letter_config {
-    target_arn = "${var.lambda_dead_letter_config_target_arn}"
-  }
+  dead_letter_config = "${var.lambda_dead_letter_config}"
+  description        = "${var.lambda_description}"
+  filename           = "${var.lambda_filename}"
+  function_name      = "${var.lambda_function_name}"
+  handler            = "${var.lambda_handler}"
+  kms_key_arn        = "${var.lambda_kms_key_arn}"
+  layers             = "${var.lambda_layers}"
+  memory_size        = "${var.lambda_memory_size}"
+  publish            = "${var.lambda_publish}"
+  role               = "${var.lambda_role_arn}"
+  runtime            = "${var.lambda_runtime}"
+  source_code_hash   = "${var.lambda_source_code_hash}"
+  tags               = "${var.lambda_tags}"
+  timeout            = "${var.lambda_timeout}"
 
   environment {
     variables = "${var.lambda_environment_variables}"

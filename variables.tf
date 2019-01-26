@@ -17,9 +17,10 @@ variable api_timeout {
   default     = 29000
 }
 
-variable lambda_dead_letter_config_target_arn {
+variable lambda_dead_letter_config {
   description = "Lambda dead letter config target ARN."
-  default     = ""
+  default     = {}
+  type        = "map"
 }
 
 variable lambda_description {
