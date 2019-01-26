@@ -64,7 +64,7 @@ resource aws_cloudwatch_log_group logs {
 
 resource aws_lambda_function lambda {
   description      = "${var.lambda_description}"
-  filename         = "${var.lambda_filepath}"
+  filename         = "${var.lambda_filename}"
   function_name    = "${var.lambda_function_name}"
   handler          = "${var.lambda_handler}"
   kms_key_arn      = "${var.lambda_kms_key_arn}"

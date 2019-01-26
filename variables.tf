@@ -33,9 +33,8 @@ variable lambda_environment_variables {
   type        = "map"
 }
 
-variable lambda_filepath {
-  description = "Lambda package filepath."
-  default     = ""
+variable lambda_filename {
+  description = "Lambda package filename."
 }
 
 variable lambda_function_name {
