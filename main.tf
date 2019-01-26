@@ -77,10 +77,6 @@ resource aws_lambda_function lambda {
   tags             = "${var.lambda_tags}"
   timeout          = "${var.lambda_timeout}"
 
-  dead_letter_config {
-    target_arn = "${var.lambda_dead_letter_config_target_arn}"
-  }
-
   environment {
     variables = "${var.lambda_environment_variables}"
   }
